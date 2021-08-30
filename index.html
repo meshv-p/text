@@ -59,7 +59,7 @@
    <div class="container">
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label m-lg-1">Your Text:</label>
-        <textarea class="form-control" value="hey" onchange="length()" id="txt" type="text" rows="3"></textarea>
+        <textarea class="form-control" value="hey" oninput="length()" id="txt" type="text" rows="3"></textarea>
         
       </div>
       <button class="btn btn-outline-success" type="submit" onclick="upper()">UpperCase</button>
@@ -69,9 +69,9 @@
       
       <p>Preview:</p>
       Total length:
-      <span class="pre" id="pre"></span> 
+      <span class="pre" id="pre">0</span> 
       <div>
-          Total Word count: <span id="word"></span>
+          Total Word count: <span id="word">0</span>
       </div>
     </div> 
 
