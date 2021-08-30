@@ -17,7 +17,7 @@ function Replace(){
     var n = prompt('which word you want to be replaced?');
     console.log(n);
     var r = prompt('what you want to change?')
-    blink(r);
+   
     console.log(txt.replace(n, r));
     var n = txt.replace(n, r);
     // r.style.backGround = 'yellow';
