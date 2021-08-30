@@ -1,6 +1,4 @@
-
-    
-  function alertbar(text){
+    function alertbar(text){
     var txt = text;
     document.getElementById('alert').innerText = txt;
     document.querySelector(".alert").style.display = "block";
