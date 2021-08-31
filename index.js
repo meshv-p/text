@@ -66,6 +66,6 @@ alertbar('Your text has been copied.');
 function Clear(){
 var txt = document.getElementById('txt');
    let html =''; 
-    txt.innerHTML = html;    
+    txt.value = html;    
     alertbar('clear Text has been successfully.');
 }
