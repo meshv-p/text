@@ -44,14 +44,12 @@ var txt = document.getElementById('txt').value;
 var l = txt.length;
 // console.log(l);
 document.getElementById('pre').innerHTML=l;
-var i=0;
-for(i=0 ;i <=txt.length ; i++){
-    if (txt.split(" ") <1){
-        // console.log()
-    }
+// var i=0;
+// for(i=0 ;i <=txt.length ; i++){
+//     if (txt.split(" ") <1){
+//         // console.log()
+//     }
    var s = txt.split(" ");
-    
-}
 // console.log(s.length);
 document.getElementById('word').innerHTML = s.length;
 }
