@@ -49,9 +49,9 @@ document.getElementById('pre').innerHTML=l;
 //     if (txt.split(" ") <1){
 //         // console.log()
 //     }
-   var s = txt.split(" ");
+//    var s = txt.split(" ");
 // console.log(s.length);
-document.getElementById('word').innerHTML = s.length;
+document.getElementById('word').innerHTML = txt.split(/\s+/).length;
 }
 
 function Copy(){
