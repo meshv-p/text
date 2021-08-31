@@ -67,5 +67,7 @@ function Clear(){
 var txt = document.getElementById('txt');
    let html =''; 
     txt.value = html;    
+    document.getElementById('pre').innerText = '0';
+    document.getElementById('word').innerText = '0';
     alertbar('Clear Text has been successfully.');
 }
