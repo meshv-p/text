@@ -63,3 +63,9 @@ console.log(txt.value);
 alertbar('Your text has been copied.');
 
 }
+function Clear(){
+var txt = document.getElementById('txt');
+   let html =''; 
+    txt.innerHTML = html;    
+    alertbar('clear Text has been successfully.');
+}
