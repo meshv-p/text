@@ -64,20 +64,29 @@
       </div>
       <button class="btn btn-outline-success" type="submit" onclick="upper()">UpperCase</button>
       <button class="btn btn-outline-primary" type="submit" onclick="lower()">LowerCase</button>
-      <button class="btn btn-outline-success" type="submit" onclick="Replace()">Find & Replace</button>
-      <button class="btn btn-outline-success" type="submit" onclick="Copy()">Copy Text</button>
+      <button class="btn btn-outline-danger" type="submit" onclick="Replace()">Find & Replace</button>
+      <button class="btn btn-outline-warning" type="submit" onclick="Copy()">Copy Text</button>
       <button class="btn btn-outline-info" type="submit" onclick="Clear()">Clear Text</button>
-
-      <p>Preview:</p>
-      Total length:
-      <span class="pre" id="pre">0</span> 
-      <div>
-          Total Word count: <span id="word">0</span>
+      
+      <div class="container mt-lg-4">
+      <h2 class="text-start m-lg-1">Preview:</h2>
+      <span class="mx-lg-5 border-bottom border-dark" id="preview">Nothing to show</span>
+      <div class="mt-1"> 
+          <span><b>Total Word:</b></span>
+          <span id="word">0</span>
+      </div>
+      <div class="mt-1">
+          <span><b>Total Characters:</b></span>
+          <span id="length"> 0</span>
+      </div>
+      <div class="mt-1">
+          <span ><b>Time For Reading:</b></span>
+          <span id="time">0 Minutes</span>
       </div>
     </div> 
 
 
-    <script src="index.js"></script>
+    <script src="js/tut1.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
