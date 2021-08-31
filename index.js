@@ -51,7 +51,7 @@ document.getElementById('pre').innerHTML=l;
 //     }
 //    var s = txt.split(" ");
 // console.log(s.length);
-document.getElementById('word').innerHTML = txt.split(/\s+/).length;
+document.getElementById('word').innerHTML = txt.split(/\s+/).filter((element)=>{return element.length!==0}).length;
 }
 
 function Copy(){
