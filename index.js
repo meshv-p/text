@@ -67,5 +67,5 @@ function Clear(){
 var txt = document.getElementById('txt');
    let html =''; 
     txt.value = html;    
-    alertbar('clear Text has been successfully.');
+    alertbar('Clear Text has been successfully.');
 }
