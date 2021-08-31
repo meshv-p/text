@@ -7,6 +7,9 @@
   }, 3000);
   }
 
+  function show(text){
+      document.getElementById('preview').innerText = text;
+  }
 
 function upper(){
     
@@ -16,7 +19,7 @@ function upper(){
     document.getElementById('txt').value = upper;
     var me = "Your text has been converted into Upper case successfully";
     alertbar("Your text has been converted into Upper case successfully");
-
+    show(upper);
 }
 function lower(){
     var txt = document.getElementById('txt').value;
@@ -24,34 +27,37 @@ function lower(){
     console.log(lower);
     document.getElementById('txt').value = lower;
     alertbar('Your text has been converted into Lower case successfully');
-
+    show(lower);
 }
 function Replace(){
     var txt = document.getElementById('txt').value;
-    var n = prompt('which word you want to be replaced?');
+    var n = prompt('which word you want to be replaced? / Find');
     console.log(n);
-    var r = prompt('what you want to change?')
+    var b = txt.includes(n);
+    console.log(b);
+    if(b.value == true) {
+    var r = prompt('what you want to change? Replace')
     alertbar(`Your ${n} has been replcaed ${r} successfully`);
- 
+        
     console.log(txt.replace(n, r));
     var n = txt.replace(n, r);
    
     document.getElementById('txt').value =n;
-
+    }
+    else{
+        alert("Your Word is not in this.")
+        alertbar(`Your ${n} is not in this.`)
+    }
+    show(n);
 }
 function length(){
 var txt = document.getElementById('txt').value;
 var l = txt.length;
 // console.log(l);
-document.getElementById('pre').innerHTML=l;
-// var i=0;
-// for(i=0 ;i <=txt.length ; i++){
-//     if (txt.split(" ") <1){
-//         // console.log()
-//     }
-//    var s = txt.split(" ");
-// console.log(s.length);
+document.getElementById('length').innerHTML=l;
 document.getElementById('word').innerHTML = txt.split(/\s+/).filter((element)=>{return element.length!==0}).length;
+show(txt);
+document.getElementById('time').innerHTML =0.008 *txt.split(/\s+/).filter((element)=>{return element.length!==0}).length +' Minutes';
 }
 
 function Copy(){
@@ -61,13 +67,15 @@ txt.setSelectionRange(0, 99999);
 document.execCommand('copy');
 console.log(txt.value);
 alertbar('Your text has been copied.');
-
 }
+
 function Clear(){
 var txt = document.getElementById('txt');
    let html =''; 
     txt.value = html;    
-    document.getElementById('pre').innerText = '0';
+    document.getElementById('length').innerText = '0';
     document.getElementById('word').innerText = '0';
+    document.getElementById('preview').innerText = 'Nothing to show';
     alertbar('Clear Text has been successfully.');
 }
+
